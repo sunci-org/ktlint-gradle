@@ -1,0 +1,10 @@
+stages:
+  - check
+
+jobs:
+  - name: lint
+    stage: check
+    image: 30121999/sunci-detekt:latest
+    script:
+      - chmod +x ./gradlew
+      - ./gradlew ktlintCheck
